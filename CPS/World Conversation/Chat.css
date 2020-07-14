@@ -1,0 +1,145 @@
+@charset "utf8";
+
+@import url('https://fonts.googleapis.com/css?family=Nova+Mono|Roboto+Condensed');
+
+/*                                     ! Accordion / Dropdown / Toggle Started Here ...
+=======================================================================================================================*/
+*,
+*:after,
+*:before,
+html
+	{box-sizing:border-box}
+
+body,html{width:100%;height:100%}
+
+body{
+	background:#0287cb;
+	margin:0;
+	padding:0;
+	font-size:16px;
+	font-style:normal;
+	font-weight:400;
+	overflow:hidden
+	}
+
+.intro{
+	top:50%;
+	left:50%;
+	display:block;
+	position:absolute;
+	text-align:center;
+	transform:translate(-50%,-50%)
+	}
+
+.image{
+	background:url("../World Conversation/logoch.png")no-repeat center / contain;
+	width:210px;
+	height:229px;
+	display:block;
+    border-radius:50%;
+    margin: 0px 90px;
+	}
+
+h1{
+	margin:0;
+	padding:0;
+	color:#ffffff;
+	font-size:30px;
+	font-family:'Nova Mono',monospace
+	}
+
+.intro span{color:#fff;font-family:'Roboto Condensed',sans-serif}
+
+.menu{
+	background:#fff;
+	height:100%;
+	top:0;
+	left:0;
+	display:flex;
+	position:fixed;
+	align-items:center;
+	flex-flow:column wrap;
+	justify-content:center
+	}
+
+.btn{margin:10px 0;padding:0 10px;position:relative}
+.btn[tabindex]{outline:none}
+
+.fab{
+	width:40px;
+	padding:12px 0;
+	cursor:pointer;
+	transition:transform .5s ease
+	}
+
+.btn:focus-within .fab{color:#ff1a1a;transform:scale(1.3,1.3)}
+.fab,.tooltips{color:#ffffff;text-align:center}
+
+.tooltips{
+	top:0;
+	left:10px;
+	z-index:-1;
+	opacity:0;
+	padding:12px 0;
+	display:block;
+	position:absolute;
+	visibility:hidden;
+	font-family:'Roboto Condensed',sans-serif;
+	transition:left .75s ease,opacity .75s ease
+	}
+	
+.btn:hover .tooltips{left:70px;opacity:1;visibility:visible}
+
+
+
+.btn:focus-within .dropdown-menu{opacity:1;visibility:visible}
+.fas{margin:5px 0;cursor:pointer}
+
+.fas span{
+	margin:0 0 0 10px;
+	font-weight:400;
+	font-family:'Roboto Condensed',sans-serif
+	}
+/*                                     ! Accordion / Dropdown / Toggle Ended Here ...
+=======================================================================================================================*/
+
+/* This Is Not Part Of Accordion / Dropdown / Toggle */
+.me{
+	background:url("../World Conversation/logoch.png")no-repeat center / contain;
+	width:40px;
+	height:40px;
+	bottom:16px;
+	right:16px;
+	z-index:999;
+	display:block;
+	position:fixed;
+	border-radius:50%;
+	animation:me 2s linear infinite alternate
+	}
+
+@keyframes me{
+	from{transform:translateY(-4px)}
+	to{transform:translateY(4px)}
+	}
+
+.me:hover span
+	{right:50px;opacity:1;visibility:visible}
+
+.me span{
+	width:150px;
+	top:10px;
+	right:0;
+	z-index:-1;
+	opacity:0;
+	color:#ffffff;
+	display:block;
+	position:absolute;
+	text-align:center;
+	visibility:hidden;
+	transition:all .5s ease;
+	font-family:Tahoma,Geneva,sans-serif
+	}
+
+
+
+

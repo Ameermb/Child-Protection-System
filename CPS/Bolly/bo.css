@@ -1,0 +1,45 @@
+body{
+padding:0px;
+margin:0px;
+background-image:url('../Bolly/580.jpg');
+background-attachment: fixed;
+background-size: cover;
+background-clip: inherit;
+background-position: center;
+}
+
+.about{
+ 
+    padding-top:90px;
+    padding-bottom:90px;
+    text-align:center;
+    position:relative;
+    overflow: hidden;
+}
+.about .overlay{
+    position:absolute;
+    left:0;
+    top:0;
+    width:120%;
+    height:120%;
+    z-index:2;
+    opacity:.3;
+    overflow: hidden;
+    
+}
+.about .text{
+    width:45%;
+    margin:0 auto;
+    background-color:#fff;
+    padding:35px;
+    position: relative;
+    z-index:4;
+    color:#555;
+    font-family: 'Roboto', sans-serif;
+
+}
+.about .text p{
+    font-size: 18px;
+    line-height: 2;
+    color: #777;
+}
